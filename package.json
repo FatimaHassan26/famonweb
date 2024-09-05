@@ -1,0 +1,25 @@
+{
+  "name": "famonweb",
+  "version": "1.0.0",
+  "description": "famon web development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FatimaHassan26/famonweb.git"
+  },
+  "author": "Fatima Hassan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FatimaHassan26/famonweb/issues"
+  },
+  "homepage": "https://github.com/FatimaHassan26/famonweb#readme",
+  "dependencies": {
+    "cli": "^1.0.1",
+    "html-webpack-plugin": "^5.6.0",
+    "save-dev": "^0.0.1-security",
+    "webpack": "^5.94.0"
+  }
+}
