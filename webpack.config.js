@@ -31,7 +31,7 @@ module.exports = {
             use: ['style-loader', 'css-loader'],
           },
           {
-            test: /\.(png|svg|jpg|jpeg|gif)$/i,
+            test: /\.(png|jpg|jpeg|gif)$/i,
             type: 'asset/resource',
           },
           {
@@ -45,6 +45,17 @@ module.exports = {
           {
             test: /\.xml$/i,
             use: ['xml-loader'],
+          },
+          {
+            test: /\.svg$/,
+            use: {
+              loader: 'file-loader',
+              options: {
+                name: '[name].[hash].[ext]', // Keep the original name with a hash
+                outputPath: 'images/', // Ensure it's in the 'images/' folder in 'dist'
+                publicPath: '/images/', // Set the public path for Webpack Dev Server
+              },
+            },
           },
         ],
     },

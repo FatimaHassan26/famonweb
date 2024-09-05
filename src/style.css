@@ -1,0 +1,44 @@
+@font-face {
+    font-family: main-font;
+    src: url(Montserrat-VariableFont_wght.woff2);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    font-family: main-font;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 25px;
+    margin-right: 45px;
+    margin-left: 45px;
+}
+
+#footer {
+    text-align: center;
+}
+
+button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    font-family: main-font;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+nav{
+    margin-top: 25px;
+}
