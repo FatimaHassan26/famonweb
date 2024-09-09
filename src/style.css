@@ -25,6 +25,7 @@ body{
 
 #footer {
     text-align: center;
+    margin-left: 45px;
 }
 
 button {
@@ -41,4 +42,18 @@ button {
 
 nav{
     margin-top: 25px;
+}
+
+#footer-services{
+    display: flex;
+    gap: 100px;
+
+}
+
+#footer-services > nav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+
 }
