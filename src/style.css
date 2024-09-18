@@ -3,29 +3,48 @@
     src: url(Montserrat-VariableFont_wght.woff2);
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     min-height: 100vh;
     font-family: main-font;
+    overflow: visible;
 }
 
+/* Promo Section */
+#promo {
+    text-align: center;
+    background: black;
+    color: white;
+    font-size: 1.5rem; /* Scalable font size */
+    max-width: 200vw;
+}
 #header {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    flex: 1;
+}
+
+/*header and footer styles*/
+header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 25px;
-    margin-right: 45px;
-    margin-left: 45px;
+    padding: 10px;
+    padding-bottom: 0px;
+    position: relative;
+    flex-wrap: wrap;
+    flex: 1;
+    /*background: rgb(138, 136, 136);*/
 }
 
 #footer {
     text-align: center;
-    margin-left: 45px;
+    padding: 10px;
 }
 
 button {
@@ -41,13 +60,44 @@ button {
 }
 
 nav{
-    margin-top: 25px;
+    display: inline-block;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dropdown {
+    display: inline-flex;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgb(87, 85, 84);
+    margin-top: 30px;
+  }
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 #footer-services{
     display: flex;
     gap: 100px;
-
+    position: relative;
 }
 
 #footer-services > nav{
@@ -55,5 +105,162 @@ nav{
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
+}
+
+/*Content styles*/
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 45px;
+    margin-right: 45px;
+    margin-top: 0%;
+    flex-grow: 1;
+    gap: 25px;
 
 }
+#section-three, #section-four, #section-five {
+    font-size: 20px;
+
+}
+
+#section-one {
+    font-size: 40px;
+    padding-top: 0;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+}
+
+#section-two {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-grow: 2;
+
+}
+
+.section-two-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify;
+    font-size: 30px;
+    max-width: 45%;
+
+}
+
+#image {
+    max-width: 100%;  /* Prevents the image from exceeding the width of its container */
+    height: auto;     /* Maintains the aspect ratio of the image */
+    display: block
+}
+#section-three {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#section-three>div {
+    text-align: center;
+    box-shadow: 5px 5px 4px 5px rgb(115, 129, 117);
+    box-sizing: border-box;
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 30px;
+
+    max-width: 400px;
+    display: block;
+}
+
+#section-four {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.workframe {
+    max-width: 100%;  /* Prevents the image from exceeding the width of its container */
+    height: auto;     /* Maintains the aspect ratio of the image */
+    display: block
+}
+
+#section-five {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: black;
+    flex-wrap: wrap;
+
+}
+#section-five >p {
+    font-size: 60px;
+    color: white;
+    display: block;
+}
+
+#section-five > button, #section-four>button {
+    background-color: white;
+    color: black;
+    height: 100px;
+    border-radius: 20px;
+    font-size: 40px;
+    width:270px;
+}
+@media (max-width: 780px) {
+    #promo {
+        font-size: 1.2rem;
+    }
+    #header {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav > button {
+        font-size: 1rem;
+    }
+    #content {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    .section-two-content {
+        font-size: 1.2rem;
+        max-width: 100%;
+    }
+    #section-five > p {
+        font-size: 2rem;
+    }
+    #section-five > button, #section-four > button {
+        font-size: 1.5rem;
+        height: 80px;
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    #promo {
+        font-size: 1rem;
+    }
+    #section-one {
+        font-size: 2rem;
+    }
+    #section-three > div {
+        font-size: 1.2rem;
+        max-width: 100%;
+    }
+    #section-five > p {
+        font-size: 1.5rem;
+    }
+    #section-five > button, #section-four > button {
+        font-size: 1.2rem;
+        height: 70px;
+        width: 150px;
+    }
+}
+
