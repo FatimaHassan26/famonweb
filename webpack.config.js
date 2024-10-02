@@ -17,6 +17,10 @@ module.exports = {
             title: 'Development',
             template: 'src/template.html'
         }),
+        new HtmlWebpackPlugin({
+          template: 'src/contact.html', 
+          filename: 'contact.html',
+      }),
     ],
     output: {
         filename: '[name].js',

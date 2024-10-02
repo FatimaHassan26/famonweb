@@ -11,10 +11,8 @@ import forwardarrow from './images/arrow_forward.svg'
 document.getElementById('logo').src = logo;
 document.getElementById('image').src = nature;
 document.getElementById('dropdown-icon').src = dropdown;
-document.getElementById('backward-arrow').src = backwardarrow;
-document.getElementById('forward-arrow').src = forwardarrow;
-document.getElementById('slide2').src = nature;
-document.getElementById('slide3').src = nature;
+//document.getElementById('slide2').src = nature;
+//document.getElementById('slide3').src = img1;
 let frames = document.querySelectorAll('.workframe');
 frames.forEach(frame => {
   frame.src = workframe;
@@ -34,3 +32,4 @@ window.addEventListener('click', function(event) {
       });
   }
 });
+
