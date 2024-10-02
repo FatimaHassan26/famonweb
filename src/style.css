@@ -8,7 +8,10 @@
     src: url(CormorantGaramond-Medium.woff);
 }
 
-
+a{
+    text-decoration: none;
+    color: black;
+}
 body {
     margin: 0;
     padding: 0;
@@ -35,6 +38,14 @@ body {
     flex: 1;
 }
 
+.header-nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
 .header-nav>a, .dropdown-button{
     font-weight: 700;
     font-size: 20px;
@@ -59,6 +70,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
     padding: 10px;
     padding-bottom: 0px;
     position: relative;
@@ -124,7 +136,7 @@ nav{
 
 #footer-services{
     display: flex;
-    gap: 100px;
+    gap: 60px;
     position: relative;
     flex-wrap: wrap;
 }
@@ -134,6 +146,7 @@ nav{
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
+    word-wrap: break-word;
 }
 
 /*Content styles*/
@@ -286,3 +299,36 @@ nav{
     color: white;
 }        
 
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea,
+fieldset {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #666565;
+    font-size: 25px;
+    font-family: section-one-font;
+    outline: none;
+}
+
+.contact-content {
+    font-size: 40px;
+    padding: 50px;
+    padding-right: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-submit-button > button {
+    background-color: rgb(41, 40, 40);
+    width:150px;
+    height: 50px;
+    box-shadow:2px 2px 1px 2px rgb(143, 143, 143);
+    font-family: section-one-font;
+    border-radius: 10px 5px;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}

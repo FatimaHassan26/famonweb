@@ -15,10 +15,11 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Development',
-            template: 'src/template.html'
+            template: 'src/template.html',
+            filename: 'index.html'
         }),
         new HtmlWebpackPlugin({
-          template: 'src/contact.html', 
+          template: './src/contact.html',
           filename: 'contact.html',
       }),
     ],
