@@ -21,7 +21,15 @@ module.exports = {
         new HtmlWebpackPlugin({
           template: './src/contact.html',
           filename: 'contact.html',
-      }),
+        }),
+        new HtmlWebpackPlugin({
+          template: './src/services.html',
+          filename: 'services.html',
+        }),
+        new HtmlWebpackPlugin({
+          template: './src/portfolio.html',
+          filename: 'portfolio.html',
+        }),
     ],
     output: {
         filename: '[name].js',

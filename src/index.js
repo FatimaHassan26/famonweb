@@ -42,6 +42,12 @@ let frames = document.querySelectorAll('.workframe');
 frames.forEach(frame => {
   frame.src = workframe;
 });
+
+let portframes = document.querySelectorAll('.port-image');
+portframes.forEach(portframe => {
+  portframe.src = workframe;
+});
+
 document.querySelectorAll('.dropdown-button').forEach(button => {
   button.addEventListener('click', function() {
  
