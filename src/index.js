@@ -1,8 +1,15 @@
 import './style.css';
 import logo from './images/Famon_WEB.svg';
 import workframe from './images/workframe.svg'
-import nature from './images/nature.svg'
+import blackrice from './images/blackrice.jpg'
 import dropdown from './images/dropdown_icon.svg'
+import phone from './images/phone.svg'
+import tutoricon from './images/book.svg'
+import maintenanceicon from './images/web_maintenance.svg'
+import customicon from './images/custom_web.svg'
+import shopifyicon from './images/shopify.svg'
+import pasta from './images/pasta.jpg'
+import sunset from './images/sunset.jpg'
 
 // Set the image source dynamically in the DOM
 document.addEventListener('DOMContentLoaded', () => {
@@ -19,10 +26,21 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Set nature image if it exists
-  const natureImageElement = document.getElementById('image');
+  const natureImageElement = document.getElementById('slide0');
   if (natureImageElement) {
-      natureImageElement.src = nature;
+      natureImageElement.src = blackrice;
   }
+
+  const pastaImageElement = document.getElementById('slide2');
+  if (pastaImageElement) {
+      pastaImageElement.src = pasta;
+  }
+
+  const sunsetImageElement = document.getElementById('slide3');
+  if (sunsetImageElement) {
+      sunsetImageElement.src = sunset;
+  }
+
 
   // Set dropdown icon if it exists
   const dropdownIconElement = document.getElementById('dropdown-icon');
@@ -34,6 +52,31 @@ document.addEventListener('DOMContentLoaded', () => {
   const contactDropdownIconElement = document.getElementById('contact-dropdown-icon');
   if (contactDropdownIconElement) {
       contactDropdownIconElement.src = dropdown;
+  }
+
+  const cellIconElement = document.getElementById('cell');
+  if (cellIconElement) {
+      cellIconElement.src = phone;
+  }
+
+  const tutorIconElement = document.getElementById('tutor');
+  if (tutorIconElement) {
+      tutorIconElement.src = tutoricon;
+  }
+
+  const maintenanceIconElement = document.getElementById('maintenance');
+  if (maintenanceIconElement) {
+    maintenanceIconElement.src = maintenanceicon;
+  }
+
+  const customIconElement = document.getElementById('custom');
+  if (customIconElement) {
+    customIconElement.src = customicon;
+  }
+
+  const shopifyIconElement = document.getElementById('shopify');
+  if (shopifyIconElement) {
+    shopifyIconElement.src = shopifyicon;
   }
 });
 //document.getElementById('slide2').src = nature;
@@ -63,4 +106,30 @@ window.addEventListener('click', function(event) {
       });
   }
 });
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    const slides = document.getElementsByClassName("slide");
+    
+    if (slideIndex >= slides.length) { 
+        slideIndex = 0; 
+    } 
+    if (slideIndex < 0) { 
+        slideIndex = slides.length - 1; 
+    }
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    
+    slides[slideIndex].style.display = "block";  
+}
+
+// Optional: Automatically change slide every 5 seconds
+setInterval(() => {
+    slideIndex++;
+    showSlides();
+}, 4000);
 

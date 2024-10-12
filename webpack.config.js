@@ -23,12 +23,12 @@ module.exports = {
           filename: 'contact.html',
         }),
         new HtmlWebpackPlugin({
-          template: './src/services.html',
-          filename: 'services.html',
+          template: './src/webdesign.html',
+          filename: 'webdesign.html',
         }),
         new HtmlWebpackPlugin({
-          template: './src/portfolio.html',
-          filename: 'portfolio.html',
+          template: './src/tutoring.html',
+          filename: 'tutoring.html',
         }),
     ],
     output: {
